@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { ArrowUpRight, Asterisk, Menu, Search } from 'lucide-react';
 
-import bg from '../../assets/hero-bg.png';
+import bg from '@assets/hero-bg.png';
 
 import HeroOverlayTestimonialImages from './HeroOverlayTestimonialImage';
 
