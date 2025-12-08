@@ -1,9 +1,9 @@
 import React from 'react';
 
-const user1 = new URL('../../assets/user1.jpg', import.meta.url).href;
-const user2 = new URL('../../assets/user2.jpg', import.meta.url).href;
-const user3 = new URL('../../assets/user3.jpg', import.meta.url).href;
-const user4 = new URL('../../assets/user4.jpg', import.meta.url).href;
+import user1 from '@assets/user1.jpg';
+import user2 from '@assets/user2.jpg';
+import user3 from '@assets/user3.jpg';
+import user4 from '@assets/user4.jpg';
 
 const HeroOverlayTestimonialImages: React.FC = () => {
   const users: string[] = [user1, user2, user3, user4];
