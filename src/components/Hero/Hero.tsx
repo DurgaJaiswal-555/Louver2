@@ -22,13 +22,22 @@ const Hero: React.FC = () => {
     >
       <div className="absolute pointer-events-none" />
 
-      <div className="relative z-10 flex items-center justify-between w-full">
+      <div className="relative z-10 flex flex-wrap items-center justify-between w-full">
         <div className="flex items-center gap-4">
           <span className="font-bold text-lg tracking-widest">
             <span className='font-extrabold'>LOUVER</span>
             <span className="font-thin"> SPORT</span>
           </span>
         </div>
+
+        <button
+          onClick={() => setMenuOpen(prev => !prev)}
+          aria-expanded={menuOpen}
+          className="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-white/20 hover:bg-white/30"
+          aria-label="Menu"
+        >
+          <Menu size={24} className="text-white" />
+        </button>
 
         <div className="hidden md:block backdrop-blur-xs rounded-full px-10 py-4">
           <nav className="flex items-center gap-8 text-sm">
@@ -38,8 +47,8 @@ const Hero: React.FC = () => {
           </nav>
         </div>
 
-        <div className="hidden md:flex items-center gap-3">
-          <form onSubmit={handleSearchSubmit} className="flex items-center backdrop-blur-sm rounded-full px-3 py-2 border border-white">
+        <div className="w-full md:w-auto flex items-center gap-3">
+          <form onSubmit={handleSearchSubmit} className="flex items-center w-full md:w-auto backdrop-blur-sm rounded-full px-4 py-3 md:px-3 md:py-2 border border-white my-4 md:my-0">
             <label htmlFor="hero-search" className="sr-only">Search</label>
             <input
               id="hero-search"
@@ -51,7 +60,7 @@ const Hero: React.FC = () => {
               <Search size={18} strokeWidth={1.25} className="text-gray-400" />
             </button>
           </form>
-          <div className="flex">
+          <div className="hidden md:flex">
             <button className="flex items-center gap-2 bg-gray-800 text-xs hover:bg-gray-900 text-white px-6 py-5 rounded-full font-semibold cursor-pointer">
               <span>Book Now</span>
               <ArrowUpRight size={16} aria-hidden />
@@ -59,14 +68,7 @@ const Hero: React.FC = () => {
           </div>
         </div>
 
-        <button
-          onClick={() => setMenuOpen(prev => !prev)}
-          aria-expanded={menuOpen}
-          className="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-white/20 hover:bg-white/30"
-          aria-label="Menu"
-        >
-          <Menu size={24} className="text-white" />
-        </button>
+        
       </div>
 
       {menuOpen && (
