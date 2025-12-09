@@ -1,51 +1,18 @@
 import type { JSX } from 'react';
-
 import { ArrowLeft, ArrowRight, MoveUpRight } from 'lucide-react';
 
-import card1 from '@assets/Card1.png';
-import card2 from '@assets/Card2.png';
-
-interface CardItem {
-    id: number;
-    title: string;
-    desc: string;
-    cta: string;
-    img?: string;
-}
-
-const cards: CardItem[] = [
-    {
-        id: 1,
-        title: 'About Loure',
-        desc: 'At Loure Sport center, we are passionate about providing top-notch sports facilities for athletes of all levels.',
-        cta: 'Book Court'
-    },
-    {
-        id: 2,
-        title: 'Indoor Area',
-        img: card1,
-        desc: 'Versatile space for wide range of activities.',
-        cta: 'Join Now'
-    },
-    {
-        id: 3,
-        title: 'Outdoor Area',
-        img: card2,
-        desc: 'Discover your new favorite sport, to play, train and compete.',
-        cta: 'View Events'
-    }
-];
+import { cards } from '@mocks/about';
 
 export default function Cards(): JSX.Element {
     return (
         <section aria-label="Cards" className="px-4 py-4 md:px-1 md:py-12 max-w-7xl mx-auto">
-            <div className="grid gap-6 grid-cols-1 md:grid-cols-3 items-start">
+            <div className="flex flex-wrap gap-6 items-start">
 
                 {/* Left: About */}
-                <div className="flex flex-col justify-between bg-white rounded-2xl p-8 h-full">
+                <div className="flex flex-col justify-between bg-white rounded-2xl h-full min-w-72 flex-1">
                     <div>
-                        <span className="inline-block bg-white border border-gray-200 text-sm px-3 py-1 rounded-full font-semibold mb-6">About Louvre</span>
-                        <h3 className="text-2xl font-thin md:text-3xl leading-10 mb-6">At Louvre sport center, we're passionate about providing a top-notch environment for athletes of all levels.</h3>
+                        <span className="inline-block bg-white border border-gray-200 text-sm px-3 py-1 rounded-full font-semibold mb-8">About Louvre</span>
+                        <h3 className="text-2xl font-light md:text-3xl leading-10 mb-6">At Louvre sport center, we're passionate about providing a top-notch environment for athletes of all levels.</h3>
                     </div>
 
                     <div>
@@ -59,7 +26,7 @@ export default function Cards(): JSX.Element {
                 </div>
 
                 {/* Center: Large card */}
-                <article className="relative rounded-2xl h-80 md:h-96 overflow-hidden">
+                <article className="relative rounded-2xl h-80 md:h-96 overflow-hidden min-w-72 flex-1">
                     <img src={cards[1].img} alt={cards[1].title} className="w-full h-full object-cover rounded-2xl" />
 
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-2xl" />
@@ -78,7 +45,7 @@ export default function Cards(): JSX.Element {
                 </article>
 
                 {/* Right: Small card */}
-                <article className="rounded-2xl overflow-hidden">
+                <article className="rounded-2xl overflow-hidden min-w-72 flex-1">
 
                     <div className="relative h-64 md:h-64">
                         <img
