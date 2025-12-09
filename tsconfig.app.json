@@ -9,7 +9,10 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@assets/*": ["src/assets/*"]
+      "@assets/*": ["src/assets/*"],
+      "@types/*": ["src/types/*"],
+      "@components/*": ["src/components/*"],
+      "@mocks/*": ["src/mock-data/*"],
     },
 
     /* Bundler mode */
