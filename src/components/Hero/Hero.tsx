@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
 
   return (
     <section
-      className="bg-[15%_center] md:bg-center relative bg-cover min-h-screen text-white flex flex-col justify-between px-6 py-8"
+      className="bg-[15%_center] md:bg-center relative bg-cover min-h-[100vh] text-white flex flex-col justify-between px-6 py-8"
       style={{ backgroundImage: `url(${bg})` }}
       aria-label="Hero section"
     >
@@ -39,36 +39,36 @@ const Hero: React.FC = () => {
           <Menu size={24} className="text-white" />
         </button>
 
-        <div className="hidden md:block backdrop-blur-xs rounded-full px-10 py-4">
-          <nav className="flex items-center gap-8 text-sm">
+        <div className="hidden md:block backdrop-blur-xs rounded-full lg:px-10 lg:py-4 md:px-6 md:py-3">
+          <nav className="flex items-center gap-8 md:gap-4 md:text-xs lg:text-sm">
             <Link to="/about" className='hover:underline'>About Us</Link>
             <Link to="/facilities" className='hover:underline'>Facilities</Link>
             <Link to="/membership" className='hover:underline'>Membership</Link>
           </nav>
         </div>
 
-        <div className="w-full md:w-auto flex items-center gap-3">
-          <form onSubmit={handleSearchSubmit} className="flex items-center w-full md:w-auto backdrop-blur-sm rounded-full px-4 py-3 md:px-3 md:py-2 border border-white my-4 md:my-0">
+        <div className="hidden md:flex items-center gap-3">
+          <form onSubmit={handleSearchSubmit} className="flex items-center backdrop-blur-[1px] rounded-full lg:px-3 lg:py-2 md:p-1  border border-white">
             <label htmlFor="hero-search" className="sr-only">Search</label>
             <input
               id="hero-search"
               type="search"
               placeholder="Search here..."
-              className="placeholder-white/70 text-white px-1 py-1 flex-1 text-sm"
+              className="placeholder-white/70 text-white p-1 flex-1 text-sm focus:outline-none focus:ring-0"
             />
             <button type="submit" className="flex-shrink-0 w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center">
               <Search size={18} strokeWidth={1.25} className="text-gray-400" />
             </button>
           </form>
           <div className="hidden md:flex">
-            <button className="flex items-center gap-2 bg-gray-800 text-xs hover:bg-gray-900 text-white px-6 py-5 rounded-full font-semibold cursor-pointer">
+            <button className="flex items-center gap-2 bg-gray-800 text-xs hover:bg-gray-900 text-white lg:px-6 lg:py-5 md:px-4 md:py-3 md:gap-1 rounded-full font-semibold cursor-pointer">
               <span>Book Now</span>
               <ArrowUpRight size={16} aria-hidden />
             </button>
           </div>
         </div>
 
-        
+
       </div>
 
       {menuOpen && (
@@ -87,27 +87,27 @@ const Hero: React.FC = () => {
         </>
       )}
 
-      <div className="relative z-10 max-w-lg text-sm md:text-base md:ml-12 mb-44 flex flex-col items-start gap-4">
+      <div className="relative z-10 lg:max-w-lg md:w-1/3 w-52 sm:w-1/3 text-sm md:text-base lg:ml-12 mb-[180px] flex flex-col items-start gap-4">
         <button className="border text-white px-4 py-2 md:px-6 md:py-4 rounded-full md:font-semibold w-auto">
           Sport Center
         </button>
 
-        <h1 className="text-2xl font-light md:text-2xl lg:text-5xl leading-[1.05] md:leading-widest tracking-wider text-left">
+        <h1 className="text-2xl font-light xl:text-4xl leading-[1.05] md:leading-widest tracking-wider md:tracking-wider text-left">
           Your Play, Your Way — Modern Sports Facilities for Every Passion
         </h1>
       </div>
 
-      <div className="absolute bottom-29 -right-2 md:right-12 md:bottom-22 pointer-events-none border border-blue-800 rounded-full inline-flex py-1 px-2">
+      <div className="absolute mr-2 bottom-22 -right-1 md:right-12 w-36 md:w-48 pointer-events-none">
         <HeroOverlayTestimonialImages />
       </div>
 
-      <div className="absolute bottom-14 right-3 md:right-12 md:bottom-6 w-48 md:w-72 pointer-events-none">
+      <div className="absolute bottom-6 right-3 md:right-12 md:bottom-5 w-48 md:w-72 pointer-events-none">
         <p className="text-xs md:text-sm text-right mt-2 leading-tight">
           We're committed to delivering a high quality experience in a welcoming and supportive atmosphere
         </p>
       </div>
 
-      <div className="text-xs absolute -right-10 top-1/3 md:top-68 md:right-24 md:right-42 w-32 h-32 md:w-40 md:h-40 pointer-events-none flex flex-col items-start md:items-start text-left md:text-left">
+      <div className="absolute right-[5%] top-[20%] md:top-[35%] md:right-[10%] lg:right-[15%] lg:top-[35%] w-fit h-fit p-2 rounded-xl text-[8px] lg:text-[10px] pointer-events-none flex flex-col items-start text-left max-lg:bg-gradient-to-b max-lg:from-white/10 max-lg:to-white/20 [max-width:340px]:bg-none">
         <Asterisk className="size-2xs md:size-base" />
         <p>All in one sports <br /> facilities center</p>
       </div>

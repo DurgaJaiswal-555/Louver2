@@ -5,14 +5,14 @@ import { cards } from '@mocks/about';
 
 export default function Cards(): JSX.Element {
     return (
-        <section aria-label="Cards" className="px-4 py-4 md:px-1 md:py-12 max-w-7xl mx-auto">
+        <section aria-label="Cards" className="px-2 sm:px-1 py-12 max-w-7xl mx-auto">
             <div className="flex flex-wrap gap-6 items-start">
 
                 {/* Left: About */}
                 <div className="flex flex-col justify-between bg-white rounded-2xl h-full min-w-72 flex-1">
                     <div>
-                        <span className="inline-block bg-white border border-gray-200 text-sm px-3 py-1 rounded-full font-semibold mb-8">About Louvre</span>
-                        <h3 className="text-2xl font-light md:text-3xl leading-10 mb-6">At Louvre sport center, we're passionate about providing a top-notch environment for athletes of all levels.</h3>
+                        <span className="inline-block bg-white border border-gray-200 text-sm px-3 py-1 rounded-full font-semibold mb-6">About Louvre</span>
+                        <h3 className="text-base sm:text-2xl font-thin md:text-3xl leading-10 mb-6">At Louvre sport center, we're passionate about providing a top-notch environment for athletes of all levels.</h3>
                     </div>
 
                     <div>
@@ -45,7 +45,7 @@ export default function Cards(): JSX.Element {
                 </article>
 
                 {/* Right: Small card */}
-                <article className="rounded-2xl overflow-hidden min-w-72 flex-1">
+                <article className="rounded-2xl overflow-hidden overflow-hidden min-w-72 flex-1">
 
                     <div className="relative h-64 md:h-64">
                         <img
