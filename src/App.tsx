@@ -1,5 +1,6 @@
 import Hero from "@components/Hero/Hero";
 import About from "@components/About";
+import Facilities from "@components/Facilities";
 
 function App() {
 
@@ -7,6 +8,7 @@ function App() {
     <>
       <Hero/>
       <About/>
+      <Facilities/>
     </>
   )
 }
