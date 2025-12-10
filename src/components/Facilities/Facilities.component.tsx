@@ -48,10 +48,10 @@ export default function FacilitiesSlider(): JSX.Element {
             <div className="relative">
                 <div
                     ref={sliderRef}
-                    className="flex gap-2 overflow-x-auto scrollbar-hide snap-x snap-mandatory md:overflow-hidden md:snap-none md:flex-nowrap"
+                       className="flex gap-2 overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth"
                 >
                     {facilities.map((fac) => (
-                        <div key={fac.id} className="snap-start shrink-0 w-72 sm:w-64 md:w-80">
+                        <div key={fac.id} className="snap-start shrink-0 w-64 md:w-80">
                             <article className="relative overflow-hidden rounded-2xl h-128 flex flex-col justify-between text-white shadow-lg">
                                 <img
                                     src={fac.img}
@@ -105,8 +105,8 @@ export default function FacilitiesSlider(): JSX.Element {
                 {/* Description */}
                 <p className="text-right md:text-right text-gray-600 max-w-2xl">
                     Book a court for focused practice, Team drills, or private
-                    <span className="inline md:block">
-                        {' '}coaching, and take your game to the next level
+                    <span className="inline md:block ml-1">
+                      coaching, and take your game to the next level
                     </span>
                 </p>
 
