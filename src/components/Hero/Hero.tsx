@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
 
   return (
     <section
-      className="bg-[15%_center] md:bg-center relative bg-cover min-h-[100vh] text-white flex flex-col justify-between px-6 py-8"
+      className="bg-position-[15%_center] md:bg-center relative bg-cover min-h-screen text-white flex flex-col justify-between px-6 py-8"
       style={{ backgroundImage: `url(${bg})` }}
       aria-label="Hero section"
     >
@@ -107,7 +107,7 @@ const Hero: React.FC = () => {
         </p>
       </div>
 
-      <div className="absolute right-[5%] top-[20%] md:top-[35%] md:right-[10%] lg:right-[15%] lg:top-[35%] w-fit h-fit p-2 rounded-xl text-[8px] lg:text-[10px] pointer-events-none flex flex-col items-start text-left max-lg:bg-gradient-to-b max-lg:from-white/10 max-lg:to-white/20 [max-width:340px]:bg-none">
+      <div className="absolute right-[5%] top-[20%] md:top-[35%] md:right-[10%] lg:right-[15%] lg:top-[35%] w-fit h-fit p-2 rounded-xl text-[8px] lg:text-[10px] pointer-events-none flex flex-col items-start text-left max-lg:bg-linear-to-b max-lg:from-white/10 max-lg:to-white/20 [max-width:340px]:bg-none">
         <Asterisk className="size-2xs md:size-base" />
         <p>All in one sports <br /> facilities center</p>
       </div>
