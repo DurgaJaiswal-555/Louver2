@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight, MoveUpRight } from 'lucide-react';
 
 import { cards } from '@mocks/about';
 import { Button } from '@common-components/ui/button';
+import { TagLabel } from '@common-components/ui/tag-label';
 
 export default function Cards(): JSX.Element {
     return (
@@ -12,7 +13,9 @@ export default function Cards(): JSX.Element {
                 {/* Left: About */}
                 <div className="flex flex-col justify-between bg-white rounded-2xl h-full min-w-72 flex-1">
                     <div>
-                        <span className="inline-block bg-white border border-gray-200 text-sm px-3 py-1 rounded-full font-semibold mb-8">About Louvre</span>
+                        <TagLabel variant="outline" className="bg-white border border-gray-200 text-black text-sm px-3 py-1 rounded-full font-semibold mb-8">
+                            About Louvre
+                        </TagLabel>
                         <h3 className="text-2xl font-light md:text-3xl leading-10 mb-6">At Louvre sport center, we're passionate about providing a top-notch environment for athletes of all levels.</h3>
                     </div>
 
@@ -33,7 +36,9 @@ export default function Cards(): JSX.Element {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-2xl" />
 
                     <div className="absolute left-6 top-6">
-                        <span className="inline-block text-white text-sm px-3 py-1 rounded-full">Indoor Area</span>
+                        <TagLabel variant="outline" className="text-white backdrop-blur-xs text-sm p-4 font-normal rounded-full">
+                            Indoor Area
+                        </TagLabel>
                     </div>
 
                     <div className="absolute left-6 bottom-6 text-white max-w-2/3">
@@ -56,9 +61,9 @@ export default function Cards(): JSX.Element {
                         />
 
                         <div className="absolute left-4 top-4">
-                            <span className="inline-block backdrop-blur-xs border-white text-white text-sm px-3 py-1 rounded-full">
+                            <TagLabel variant="outline" className="text-white backdrop-blur-xs text-sm px-4 py-4 font-normal rounded-full">
                                 Outdoor Area
-                            </span>
+                            </TagLabel>
                         </div>
 
                         <div className="absolute left-6 bottom-6 text-white max-w-2/3">

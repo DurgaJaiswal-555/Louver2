@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { ArrowUpRight, Asterisk, Menu, Search } from 'lucide-react';
 
 import { Button } from '@common-components/ui/button';
+import { TagLabel } from '@common-components/ui/tag-label';
 
 import bg from '@assets/hero-bg.png';
 
@@ -93,9 +94,9 @@ const Hero: React.FC = () => {
       )}
 
       <div className="relative z-10 max-w-lg text-sm md:text-base md:ml-12 mb-44 flex flex-col items-start gap-4">
-        <button className="border text-white px-4 py-2 md:px-6 md:py-4 rounded-full md:font-semibold w-auto">
+        <TagLabel variant="outline" className="text-sm border-white md:text-base text-white px-4 py-2 md:p-7 md:font-semibold rounded-full">
           Sport Center
-        </button>
+        </TagLabel>
 
         <h1 className="text-2xl font-light md:text-2xl lg:text-5xl leading-[1.05] md:leading-widest tracking-wider text-left">
           Your Play, Your Way — Modern Sports Facilities for Every Passion

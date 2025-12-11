@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight, ChevronRight, MoveUpRight } from 'lucide-react';
 
 import { facilities } from '@mocks/facility';
 import { Button } from '@common-components/ui/button';
+import { TagLabel } from '@common-components/ui/tag-label';
 
 export default function FacilitiesSlider(): JSX.Element {
     const sliderRef = useRef<HTMLDivElement | null>(null);
@@ -31,9 +32,9 @@ export default function FacilitiesSlider(): JSX.Element {
             {/* Header */}
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-0 mb-8">
                 <div className="flex flex-col md:flex-row md:items-center gap-4">
-                    <span className="text-sm font-semibold text-gray-600 border rounded-full px-8 py-2 w-fit">
+                    <TagLabel variant="outline" className="text-gray-600 border-gray-600 rounded-full px-8 py-5">
                         Facilities
-                    </span>
+                    </TagLabel>
                     <h2 className="text-3xl md:text-4xl font-bold my-2">
                         Explore Our Facilities
                     </h2>
@@ -62,9 +63,9 @@ export default function FacilitiesSlider(): JSX.Element {
                                 />
 
                                 <div className="relative z-10 p-5 flex flex-col h-full justify-between">
-                                    <span className="inline-block self-start text-xs px-3 py-1 border rounded-full font-semibold mb-3">
+                                    <TagLabel variant="outline" className="text-white self-start text-xs px-4 py-1 border-white rounded-full font-semibold mb-3">
                                         {fac.title}
-                                    </span>
+                                    </TagLabel>
 
                                     <div className="flex items-center gap-3 bg-white/20 backdrop-blur-md rounded-lg p-3">
                                         <p className="text-sm font-thin tracking-wider flex-1">
