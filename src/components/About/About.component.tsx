@@ -2,6 +2,7 @@ import type { JSX } from 'react';
 import { ArrowLeft, ArrowRight, MoveUpRight } from 'lucide-react';
 
 import { cards } from '@mocks/about';
+import { Button } from '@common-components/ui/button';
 
 export default function Cards(): JSX.Element {
     return (
@@ -16,12 +17,12 @@ export default function Cards(): JSX.Element {
                     </div>
 
                     <div>
-                        <button className="inline-flex items-center gap-3 bg-gray-800 text-white px-6 py-3 rounded-full font-semibold cursor-pointer">
+                        <Button
+                            rightIcon={<MoveUpRight className="size-4" />}
+                            className="bg-gray-800 hover:bg-gray-900 text-white px-9 py-7 rounded-full font-semibold cursor-pointer gap-2"
+                        >
                             Get in Touch
-                            <span className="inline-flex items-center justify-center w-7 h-7 bg-transparent rounded-full">
-                                <MoveUpRight className="w-4 h-4" />
-                            </span>
-                        </button>
+                        </Button>
                     </div>
                 </div>
 

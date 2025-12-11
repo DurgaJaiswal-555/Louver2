@@ -12,6 +12,8 @@ export default defineConfig({
       "@types": path.resolve(__dirname, "src/types"),
       "@components": path.resolve(__dirname, "src/components"),
       "@mocks": path.resolve(__dirname, "src/mock-data"),
+      "@lib": path.resolve(__dirname, "src/lib"),
+      "@common-components": path.resolve(__dirname, "src/common-components"),
     },
   },
 })

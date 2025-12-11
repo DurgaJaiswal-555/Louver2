@@ -2,6 +2,7 @@ import { useRef, type JSX } from 'react';
 import { ArrowLeft, ArrowRight, ChevronRight, MoveUpRight } from 'lucide-react';
 
 import { facilities } from '@mocks/facility';
+import { Button } from '@common-components/ui/button';
 
 export default function FacilitiesSlider(): JSX.Element {
     const sliderRef = useRef<HTMLDivElement | null>(null);
@@ -37,18 +38,19 @@ export default function FacilitiesSlider(): JSX.Element {
                         Explore Our Facilities
                     </h2>
                 </div>
-
-                <button className="bg-black cursor-pointer text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2 hover:bg-gray-800 w-fit md:w-auto">
+                <Button
+                    rightIcon={<ChevronRight className="size-6" />}
+                    className="bg-black cursor-pointer text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-800"
+                >
                     View all
-                    <ChevronRight size={16} />
-                </button>
+                </Button>
             </div>
 
             {/* Slider */}
             <div className="relative">
                 <div
                     ref={sliderRef}
-                       className="flex gap-2 overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth"
+                    className="flex gap-2 overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth"
                 >
                     {facilities.map((fac) => (
                         <div key={fac.id} className="snap-start shrink-0 w-64 md:w-80">
@@ -106,7 +108,7 @@ export default function FacilitiesSlider(): JSX.Element {
                 <p className="text-right md:text-right text-gray-600 max-w-2xl">
                     Book a court for focused practice, Team drills, or private
                     <span className="inline md:block ml-1">
-                      coaching, and take your game to the next level
+                        coaching, and take your game to the next level
                     </span>
                 </p>
 

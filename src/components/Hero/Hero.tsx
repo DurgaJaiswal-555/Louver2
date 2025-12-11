@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 import { ArrowUpRight, Asterisk, Menu, Search } from 'lucide-react';
 
+import { Button } from '@common-components/ui/button';
+
 import bg from '@assets/hero-bg.png';
 
 import HeroOverlayTestimonialImages from './HeroOverlayTestimonialImage';
@@ -61,14 +63,17 @@ const Hero: React.FC = () => {
             </button>
           </form>
           <div className="hidden md:flex">
-            <button className="flex items-center gap-2 bg-gray-800 text-xs hover:bg-gray-900 text-white px-6 py-5 rounded-full font-semibold cursor-pointer">
-              <span>Book Now</span>
-              <ArrowUpRight size={16} aria-hidden />
-            </button>
+            <Button
+              variant="primary"
+              rightIcon={<ArrowUpRight className="size-6" />}
+              className="bg-gray-800 text-md hover:bg-gray-900 text-white px-6 py-6 rounded-full font-semibold cursor-pointer"
+            >
+              Book Now
+            </Button>
           </div>
         </div>
 
-        
+
       </div>
 
       {menuOpen && (
