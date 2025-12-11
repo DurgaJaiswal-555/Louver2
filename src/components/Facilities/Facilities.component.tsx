@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight, ChevronRight, MoveUpRight } from 'lucide-react';
 import { facilities } from '@mocks/facility';
 import { Button } from '@common-components/ui/button';
 import { TagLabel } from '@common-components/ui/tag-label';
+import { OnlyIconButton } from '@common-components/ui/only-icon-btn/iconBtn';
 
 export default function FacilitiesSlider(): JSX.Element {
     const sliderRef = useRef<HTMLDivElement | null>(null);
@@ -73,9 +74,11 @@ export default function FacilitiesSlider(): JSX.Element {
                                         </p>
 
                                         {fac.id === 1 && (
-                                            <span className="inline-block bg-black text-white p-2 rounded-full cursor-pointer">
-                                                <MoveUpRight />
-                                            </span>
+                                            <OnlyIconButton
+                                                variant="outline"
+                                                icon={<MoveUpRight size={22} />}
+                                                className="bg-black size-10 border-none text-white p-2"
+                                            />
                                         )}
                                     </div>
                                 </div>
@@ -90,19 +93,18 @@ export default function FacilitiesSlider(): JSX.Element {
 
                 {/* Arrows */}
                 <div className="flex gap-3 justify-end md:justify-start mt-6 md:mt-0">
-                    <button
+                    <OnlyIconButton
                         onClick={prev}
-                        className="text-gray-500 w-12 h-12 bg-white flex items-center justify-center border rounded-full cursor-pointer"
-                    >
-                        <ArrowLeft />
-                    </button>
-
-                    <button
+                        variant="outline"
+                        icon={<ArrowLeft size={22} />}
+                        className="text-gray-500 size-12 border-gray-500 bg-white cursor-pointer"
+                    />
+                    <OnlyIconButton
                         onClick={next}
-                        className="text-gray-500 w-12 h-12 bg-white flex items-center justify-center border rounded-full cursor-pointer"
-                    >
-                        <ArrowRight />
-                    </button>
+                        variant="outline"
+                        icon={<ArrowRight size={22} />}
+                        className="text-gray-500 size-12 border-gray-500 bg-white cursor-pointer"
+                    />
                 </div>
 
                 {/* Description */}

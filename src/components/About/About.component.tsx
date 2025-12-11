@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight, MoveUpRight } from 'lucide-react';
 import { cards } from '@mocks/about';
 import { Button } from '@common-components/ui/button';
 import { TagLabel } from '@common-components/ui/tag-label';
+import { OnlyIconButton } from '@common-components/ui/only-icon-btn/iconBtn';
 
 export default function Cards(): JSX.Element {
     return (
@@ -45,9 +46,11 @@ export default function Cards(): JSX.Element {
                         <div className="text-sm font-medium">Versatile space for a wide range of activities</div>
                     </div>
 
-                    <button className="absolute cursor-pointer right-6 bottom-6 w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-md">
-                        <MoveUpRight className="text-black" />
-                    </button>
+                    <OnlyIconButton
+                        variant="outline"
+                        icon={<MoveUpRight size={22} />}
+                        className="absolute cursor-pointer right-6 bottom-6 size-12 bg-white shadow-md border-none"
+                    />
                 </article>
 
                 {/* Right: Small card */}
@@ -70,9 +73,11 @@ export default function Cards(): JSX.Element {
                             <div className="text-xl font-medium">Futsal Court</div>
                         </div>
 
-                        <button className="absolute cursor-pointer right-6 bottom-6 w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center shadow-md">
-                            <MoveUpRight className="text-white" />
-                        </button>
+                        <OnlyIconButton
+                            variant="outline"
+                            icon={<MoveUpRight size={22} />}
+                            className="absolute cursor-pointer right-6 bottom-6 size-12 bg-gray-800 text-white shadow-md border-none"
+                        />
                     </div>
 
                     <div className="flex items-center justify-between py-4">
@@ -81,8 +86,16 @@ export default function Cards(): JSX.Element {
                         </div>
 
                         <div className="flex gap-3">
-                            <button className="text-gray-500 w-10 h-10 rounded-full bg-white flex items-center justify-center border rounded-full cursor-pointer"><ArrowLeft /></button>
-                            <button className="text-gray-500 w-10 h-10 rounded-full bg-white flex items-center justify-center border rounded-full cursor-pointer"><ArrowRight /></button>
+                            <OnlyIconButton
+                                variant="outline"
+                                icon={<ArrowLeft size={22} />}
+                                className="text-gray-500 size-10 border-gray-500 bg-white cursor-pointer"
+                            />
+                            <OnlyIconButton
+                                variant="outline"
+                                icon={<ArrowRight size={22} />}
+                                className="text-gray-500 size-10 border-gray-500 bg-white cursor-pointer"
+                            />
                         </div>
                     </div>
 
