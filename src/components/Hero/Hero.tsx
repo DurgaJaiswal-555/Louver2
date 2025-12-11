@@ -106,8 +106,7 @@ const Hero: React.FC = () => {
           We're committed to delivering a high quality experience in a welcoming and supportive atmosphere
         </p>
       </div>
-
-      <div className="absolute right-[5%] top-[20%] md:top-[35%] md:right-[10%] lg:right-[15%] lg:top-[35%] w-fit h-fit p-2 rounded-xl text-[8px] lg:text-[10px] pointer-events-none flex flex-col items-start text-left max-lg:bg-linear-to-b max-lg:from-white/10 max-lg:to-white/20 [max-width:340px]:bg-none">
+      <div className="absolute top-1/5 md:top-1/3 right-1/20 md:right-1/6 w-fit h-fit p-2 rounded-xl text-[8px] lg:text-[10px] pointer-events-none flex flex-col items-start text-left max-lg:bg-linear-to-b max-lg:from-white/10 max-lg:to-white/20 [max-width:340px]:bg-none">
         <Asterisk className="size-2xs md:size-base" />
         <p>All in one sports <br /> facilities center</p>
       </div>
