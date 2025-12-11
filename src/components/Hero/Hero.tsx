@@ -56,8 +56,8 @@ const Hero: React.FC = () => {
               placeholder="Search here..."
               className="placeholder-white/70 text-white p-1 flex-1 text-sm focus:outline-none focus:ring-0"
             />
-            <button type="submit" className="flex-shrink-0 w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center">
-              <Search size={18} strokeWidth={1.25} className="text-gray-400" />
+            <button type="submit" className="flex-shrink-0 w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
+              <Search size={18} strokeWidth={2.5} className="text-gray-800" />
             </button>
           </form>
           <div className="hidden md:flex">

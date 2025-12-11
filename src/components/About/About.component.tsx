@@ -9,10 +9,10 @@ export default function Cards(): JSX.Element {
             <div className="flex flex-wrap gap-6 items-start">
 
                 {/* Left: About */}
-                <div className="flex flex-col justify-between bg-white rounded-2xl h-full min-w-72 flex-1">
+                <div className="flex flex-col justify-between bg-white rounded-2xl h-full min-w-64 flex-1">
                     <div>
                         <span className="inline-block bg-white border border-gray-200 text-sm px-3 py-1 rounded-full font-semibold mb-6">About Louvre</span>
-                        <h3 className="text-base sm:text-2xl font-thin md:text-3xl leading-10 mb-6">At Louvre sport center, we're passionate about providing a top-notch environment for athletes of all levels.</h3>
+                        <h3 className="text-lg sm:text-2xl font-thin md:text-3xl leading-10 mb-6 text-wrap">At Louvre sport center, we're passionate about providing a top-notch environment for athletes of all levels.</h3>
                     </div>
 
                     <div>
