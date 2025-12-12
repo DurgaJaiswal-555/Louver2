@@ -12,6 +12,13 @@ export default function Navbar() {
     const handleSearchSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
     };
+
+    const navItems = [
+        { label: "About Us", to: "/about" },
+        { label: "Facilities", to: "/facilities" },
+        { label: "Membership", to: "/membership" },
+    ];
+
     return (
         <>
             <div className="relative z-10 flex flex-wrap items-center justify-between w-full">
@@ -32,39 +39,20 @@ export default function Navbar() {
                 </button>
 
                 <div className="hidden md:block backdrop-blur-xs rounded-full px-12 py-4">
-                    <nav className="flex items-center gap-8 text-lg">
-                        <NavLink
-                            to="/about"
-                            className={({ isActive }) =>
-                                isActive
-                                    ? "underline font-semibold text-white"
-                                    : "hover:underline text-white/80"
-                            }
-                        >
-                            About Us
-                        </NavLink>
-
-                        <NavLink
-                            to="/facilities"
-                            className={({ isActive }) =>
-                                isActive
-                                    ? "underline font-semibold text-white"
-                                    : "hover:underline text-white/80"
-                            }
-                        >
-                            Facilities
-                        </NavLink>
-
-                        <NavLink
-                            to="/membership"
-                            className={({ isActive }) =>
-                                isActive
-                                    ? "underline font-semibold text-white"
-                                    : "hover:underline text-white/80"
-                            }
-                        >
-                            Membership
-                        </NavLink>
+                    <nav className="flex items-center gap-8 text-md">
+                        {navItems.map((item) => (
+                            <NavLink
+                                key={item.to}
+                                to={item.to}
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? "underline font-semibold text-white"
+                                        : "hover:underline text-white/80"
+                                }
+                            >
+                                {item.label}
+                            </NavLink>
+                        ))}
                     </nav>
                 </div>
 
@@ -90,23 +78,33 @@ export default function Navbar() {
                 </div>
             </div>
 
-            {
-                menuOpen && (
-                    <>
-                        <div className="fixed inset-0 z-20 bg-black/40" onClick={() => setMenuOpen(false)} />
-                        <div
-                            role="menu"
-                            aria-label="Mobile navigation"
-                            className="absolute top-20 right-6 z-30 w-40 bg-white rounded-lg shadow-lg overflow-hidden md:hidden p-2"
-                            onClick={(e) => e.stopPropagation()}
-                        >
-                            <a href="#about-us" className="block px-4 py-3 my-1 text-gray-700 text-sm focus:bg-black focus:text-white rounded-lg hover:bg-gray-700">About Us</a>
-                            <a href="#facilities" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg focus:bg-black focus:text-white my-1 ">Facilities</a>
-                            <a href="#membership" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg focus:bg-black focus:text-white my-1 ">Membership</a>
-                        </div>
-                    </>
-                )
-            }
+            {menuOpen && (
+                <>
+                    <div
+                        className="fixed inset-0 z-20 bg-black/40"
+                        onClick={() => setMenuOpen(false)}
+                    />
+
+                    <div
+                        role="menu"
+                        aria-label="Mobile navigation"
+                        className="absolute top-20 right-6 z-30 w-40 bg-white rounded-lg shadow-lg overflow-hidden md:hidden p-2"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        {navItems.map((item) => (
+                            <NavLink
+                                key={item.to}
+                                to={item.to}
+                                onClick={() => setMenuOpen(false)}
+                                className={({ isActive }) => `block px-4 py-3 my-1 text-sm rounded-lg ${isActive ? "bg-black text-white font-semibold" : "text-gray-700 hover:bg-gray-100"}`}
+                            >
+                                {item.label}
+                            </NavLink>
+                        ))}
+                    </div>
+                </>
+            )}
+
         </>
     );
 }
