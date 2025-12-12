@@ -5,6 +5,7 @@ import { ArrowUpRight, Asterisk, Menu, Search } from 'lucide-react';
 
 import { Button } from '@common-components/ui/button';
 import { TagLabel } from '@common-components/ui/tag-label';
+import { InputFieldWithIconButton } from '@common-components/ui/input-with-icon-btn';
 
 import bg from '@assets/hero-bg.png';
 
@@ -51,17 +52,14 @@ const Hero: React.FC = () => {
         </div>
 
         <div className="w-full md:w-auto flex items-center gap-3">
-          <form onSubmit={handleSearchSubmit} className="flex items-center w-full md:w-auto backdrop-blur-sm rounded-full px-4 py-3 md:px-3 md:py-2 border border-white my-4 md:my-0">
-            <label htmlFor="hero-search" className="sr-only">Search</label>
-            <input
-              id="hero-search"
-              type="search"
-              placeholder="Search here..."
-              className="placeholder-white/70 text-white px-1 py-1 flex-1 text-sm"
+          <form onSubmit={handleSearchSubmit} className="flex items-center w-full md:w-auto backdrop-blur-sm rounded-full px-4 py-3 md:px-3 md:py-1 border border-white my-4 md:my-0">
+            <InputFieldWithIconButton
+              placeholder="Search..."
+              variant="outline"
+              inputSize="lg"
+              className="placeholder-white/70 text-white px-4 flex-1 text-sm outline-none border-none w-full md:w-64"
+              rightButtonIcon={<Search strokeWidth={2} className="p-2 size-10 text-gray-800 rounded-full bg-gray-300" />}
             />
-            <button type="submit" className="flex-shrink-0 w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center">
-              <Search size={18} strokeWidth={1.25} className="text-gray-400" />
-            </button>
           </form>
           <div className="hidden md:flex">
             <Button
@@ -73,8 +71,6 @@ const Hero: React.FC = () => {
             </Button>
           </div>
         </div>
-
-
       </div>
 
       {menuOpen && (
