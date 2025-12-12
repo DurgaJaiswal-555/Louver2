@@ -45,7 +45,7 @@ export default function Cards(): JSX.Element {
                 </article>
 
                 {/* Right: Small card */}
-                <article className="rounded-2xl overflow-hidden overflow-hidden min-w-72 flex-1">
+                <article className="rounded-2xl overflow-hidden min-w-72 flex-1">
 
                     <div className="relative h-64 md:h-64">
                         <img
