@@ -39,8 +39,8 @@ const Hero: React.FC = () => {
           <Menu size={24} className="text-white" />
         </button>
 
-        <div className="hidden md:block backdrop-blur-xs rounded-full lg:px-10 lg:py-4 md:px-6 md:py-3">
-          <nav className="flex items-center gap-8 md:gap-4 md:text-xs lg:text-sm">
+        <div className="hidden md:block backdrop-blur-xs rounded-full md:px-6 md:py-3">
+          <nav className="flex items-center gap-8 md:gap-4 md:text-sm">
             <Link to="/about" className='hover:underline'>About Us</Link>
             <Link to="/facilities" className='hover:underline'>Facilities</Link>
             <Link to="/membership" className='hover:underline'>Membership</Link>
@@ -48,7 +48,7 @@ const Hero: React.FC = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-3">
-          <form onSubmit={handleSearchSubmit} className="flex items-center backdrop-blur-[1px] rounded-full lg:px-3 lg:py-2 md:p-1  border border-white">
+          <form onSubmit={handleSearchSubmit} className="flex items-center backdrop-blur-[1px] rounded-full md:p-1  border border-white">
             <label htmlFor="hero-search" className="sr-only">Search</label>
             <input
               id="hero-search"
@@ -61,7 +61,7 @@ const Hero: React.FC = () => {
             </button>
           </form>
           <div className="hidden md:flex">
-            <button className="flex items-center gap-2 bg-gray-800 text-xs hover:bg-gray-900 text-white lg:px-6 lg:py-5 md:px-4 md:py-3 md:gap-1 rounded-full font-semibold cursor-pointer">
+            <button className="flex items-center gap-2 bg-gray-800 text-xs hover:bg-gray-900 text-white md:px-6 md:py-5 md:px-4 md:py-3 md:gap-1 rounded-full font-semibold cursor-pointer">
               <span>Book Now</span>
               <ArrowUpRight size={16} aria-hidden />
             </button>
@@ -87,7 +87,7 @@ const Hero: React.FC = () => {
         </>
       )}
 
-      <div className="relative z-10 lg:max-w-lg md:w-1/3 w-52 sm:w-1/3 text-sm md:text-base lg:ml-12 mb-[180px] flex flex-col items-start gap-4">
+      <div className="relative z-10 w-3/4 md:w-1/3 text-sm md:text-base md:ml-12 mb-[180px] flex flex-col items-start gap-4">
         <button className="border text-white px-4 py-2 md:px-6 md:py-4 rounded-full md:font-semibold w-auto">
           Sport Center
         </button>
@@ -106,7 +106,7 @@ const Hero: React.FC = () => {
           We're committed to delivering a high quality experience in a welcoming and supportive atmosphere
         </p>
       </div>
-      <div className="absolute top-1/5 md:top-1/3 right-1/20 md:right-1/6 w-fit h-fit p-2 rounded-xl text-[8px] lg:text-[10px] pointer-events-none flex flex-col items-start text-left max-lg:bg-linear-to-b max-lg:from-white/10 max-lg:to-white/20 [max-width:340px]:bg-none">
+      <div className="absolute top-1/5 md:top-1/3 right-1/20 md:right-1/6 w-fit h-fit p-2 rounded-xl text-[8px] md:text-[10px] pointer-events-none flex flex-col items-start text-left max-md:bg-linear-to-b max-md:from-white/10 max-md:to-white/20 [max-width:340px]:bg-none">
         <Asterisk className="size-2xs md:size-base" />
         <p>All in one sports <br /> facilities center</p>
       </div>

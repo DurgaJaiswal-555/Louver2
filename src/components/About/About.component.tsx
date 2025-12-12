@@ -5,14 +5,14 @@ import { cards } from '@mocks/about';
 
 export default function Cards(): JSX.Element {
     return (
-        <section aria-label="Cards" className="px-2 sm:px-1 py-12 max-w-7xl mx-auto">
+        <section aria-label="Cards" className="px-1 md:px-2 py-12 max-w-7xl mx-auto">
             <div className="flex flex-wrap gap-6 items-start">
 
                 {/* Left: About */}
                 <div className="flex flex-col justify-between bg-white rounded-2xl h-full min-w-64 flex-1">
                     <div>
                         <span className="inline-block bg-white border border-gray-200 text-sm px-3 py-1 rounded-full font-semibold mb-6">About Louvre</span>
-                        <h3 className="text-lg sm:text-2xl font-thin md:text-3xl leading-10 mb-6 text-wrap">At Louvre sport center, we're passionate about providing a top-notch environment for athletes of all levels.</h3>
+                        <h3 className="text-2xl font-thin md:text-3xl leading-10 mb-6 text-wrap">At Louvre sport center, we're passionate about providing a top-notch environment for athletes of all levels.</h3>
                     </div>
 
                     <div>
@@ -26,7 +26,7 @@ export default function Cards(): JSX.Element {
                 </div>
 
                 {/* Center: Large card */}
-                <article className="relative rounded-2xl h-80 md:h-96 overflow-hidden min-w-72 flex-1">
+                <article className="relative rounded-2xl h-72 md:h-80 overflow-hidden min-w-72 flex-1">
                     <img src={cards[1].img} alt={cards[1].title} className="w-full h-full object-cover rounded-2xl" />
 
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-2xl" />
