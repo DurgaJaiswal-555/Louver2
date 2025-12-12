@@ -34,11 +34,11 @@ export default function SportsCategory(): JSX.Element {
             ))}
           </div>
 
-          <h2 className="text-3xl md:text-5xl mb-4 sm:w-3/4 md:w-full">
+          <h2 className="text-3xl md:text-5xl mb-4 w-3/4 md:w-full">
             {activeTab.title}
           </h2>
 
-          <p className="text-gray-600 text-sm sm:text-base mb-6 sm:w-3/4 md:w-full">
+          <p className="text-gray-600 text-sm md:text-base mb-6 w-3/4 md:w-full">
             {activeTab.desc}
           </p>
 
