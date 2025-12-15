@@ -24,9 +24,9 @@ export const InputFieldWithIconButton = React.forwardRef<
         };
 
         const sizes = {
-            sm: "h-8 text-sm p-8",
-            md: "h-10 text-base pl-9 pr-10",
-            lg: "h-12 text-lg pl-10 pr-10",
+            sm: "h-8 text-sm pl-8",
+            md: "h-10 text-base pl-9",
+            lg: "h-12 text-lg pl-10",
         };
 
         return (
@@ -39,6 +39,11 @@ export const InputFieldWithIconButton = React.forwardRef<
                         "w-full rounded-md outline-none transition-all",
                         variants[variant],
                         sizes[inputSize],
+                        rightButtonIcon && {
+                            "pr-8": inputSize === "sm",
+                            "pr-10": inputSize === "md",
+                            "pr-12": inputSize === "lg",
+                        },
                         className
                     )}
                     {...props}
