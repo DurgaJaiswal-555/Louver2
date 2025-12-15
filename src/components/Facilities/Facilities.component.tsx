@@ -30,12 +30,12 @@ export default function FacilitiesSlider(): JSX.Element {
             {/* Header */}
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-0 mb-8">
                 <div className="flex flex-col md:flex-row md:items-center gap-4">
-                    <span className="text-sm font-semibold text-gray-600 border rounded-full px-8 py-2 w-fit">
+                    <span className="text-sm leading-none flex items-center font-semibold text-gray-600 border border-gray-300 rounded-full px-8 py-3 w-fit">
                         Facilities
                     </span>
-                    <h2 className="text-3xl md:text-4xl font-bold my-2">
+                    <span className="leading-none text-3xl md:text-4xl font-bold m-0">
                         Explore Our Facilities
-                    </h2>
+                    </span>
                 </div>
 
                 <button className="bg-black cursor-pointer text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2 hover:bg-gray-800 w-fit md:w-auto">
@@ -48,7 +48,7 @@ export default function FacilitiesSlider(): JSX.Element {
             <div className="relative">
                 <div
                     ref={sliderRef}
-                       className="flex gap-2 overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth"
+                       className="flex gap-2 overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar"
                 >
                     {facilities.map((fac) => (
                         <div key={fac.id} className="snap-start shrink-0 w-64 md:w-80">
