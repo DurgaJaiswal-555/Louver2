@@ -15,7 +15,7 @@ export default function SportsCategory(): JSX.Element {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
 
         {/* LEFT CONTENT */}
-        <div className="md:col-span-6 lg:col-span-5 justify-between h-full">
+        <div className="md:col-span-6 justify-between h-full">
 
           <div className="flex flex-wrap gap-2 md:gap-3 mb-2 md:mb-6">
             {SPORTS_TAB_DATA.map((t) => (
@@ -51,7 +51,7 @@ export default function SportsCategory(): JSX.Element {
         </div>
 
         {/* RIGHT IMAGE */}
-        <div className="relative overflow-hidden md:col-span-6 lg:col-span-7 shadow-lg shadow-blue-300 rounded-2xl">
+        <div className="relative overflow-hidden md:col-span-6 shadow-lg shadow-blue-300 rounded-2xl">
           <img
             src={activeTab.img}
             alt={activeTab.label}
