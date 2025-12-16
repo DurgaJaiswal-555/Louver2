@@ -1,4 +1,3 @@
-// src/components/ui/button/button.tsx
 import React from "react";
 import { cn } from "@lib/cn";
 
