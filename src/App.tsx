@@ -4,7 +4,7 @@ import Facilities from "@components/Facilities";
 import SportsCategory from "@components/SportsCategory";
 import ContactForm from "@components/ContactUs";
 import Testimonials from "@components/Testimonial";
-import Footer from "@components/Footer/Footer.component";
+import Footer from "@components/Footer";
 
 function App() {
 
