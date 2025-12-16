@@ -5,7 +5,7 @@ import type { TabItem } from './SportsCategory.types';
 import { SPORTS_TAB_DATA } from '@mocks/sportsCategory';
 
 export default function SportsCategory(): JSX.Element {
-  const defaultTab = SPORTS_TAB_DATA[0]?.id ?? ' ';
+  const defaultTab = SPORTS_TAB_DATA[0]?.id ?? '';
   const [active, setActive] = useState<string | undefined>(defaultTab);
 
   const activeTab: TabItem =
