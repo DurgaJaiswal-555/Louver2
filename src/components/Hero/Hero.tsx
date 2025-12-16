@@ -7,7 +7,7 @@ import { TagLabel } from '@common-components/ui/tag-label';
 import bg from '@assets/hero-bg.png';
 
 import HeroOverlayTestimonialImages from './HeroOverlayTestimonialImage';
-import Navbar from '@components/Navbar/Navbar.component';
+import Navbar from '@components/Navbar';
 
 const Hero: React.FC = () => {
 
