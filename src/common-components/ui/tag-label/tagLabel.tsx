@@ -1,7 +1,7 @@
 import React from "react";
 import { cn } from "@lib/cn";
 
-import type { TagLabelProps } from "./tabLabel.type";
+import type { TagLabelProps } from "./tagLabel.type";
 
 export const TagLabel = React.forwardRef<HTMLDivElement, TagLabelProps>(
   (
