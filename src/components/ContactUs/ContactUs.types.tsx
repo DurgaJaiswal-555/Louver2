@@ -1,14 +1,12 @@
-type FormFieldName = "name" | "email" | "contact";
-
 export default interface FormState {
-    name: string;
-    email: string;
-    contact: string;
+  name: string;
+  email: string;
+  contact: string;
 }
 
 export interface InputFieldConfig {
-  id: FormFieldName;
-  name: FormFieldName;
+  id: string;
+  name: string;
   type: string;
   placeholder: string;
   required?: boolean;

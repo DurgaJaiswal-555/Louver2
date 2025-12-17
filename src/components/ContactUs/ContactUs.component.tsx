@@ -21,6 +21,10 @@ export default function ContactForm() {
         setForm({ name: "", email: "", contact: "" });
     };
 
+    const isFormKey = (key: string): key is keyof FormState => {
+        return key in form;
+    };
+
     return (
         <section aria-label="Contact us" className="py-12 bg-gray-100">
             <div className="max-w-7xl mx-auto">
@@ -44,24 +48,24 @@ export default function ContactForm() {
                         </p>
 
                         <form onSubmit={handleSubmit} className="space-y-4 w-full">
-                            {INPUT_FIELDS?.map((field) => (
-                                <div key={field?.id}>
-                                    <label htmlFor={field?.id} className="sr-only">
-                                        {field?.placeholder}
-                                    </label>
+                            {INPUT_FIELDS.map((field) => {
+                                if (!isFormKey(field.name)) return null;
 
-                                    <input
-                                        id={field?.id}
-                                        name={field?.name}
-                                        type={field?.type}
-                                        value={form[field?.name]}
-                                        onChange={handleChange}
-                                        required={field?.required}
-                                        placeholder={field?.placeholder}
-                                        className={"w-full mb-1 rounded-full border border-gray-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-sky-400"}
-                                    />
-                                </div>
-                            ))}
+                                return (
+                                    <div key={field.id}>
+                                        <input
+                                            id={field.id}
+                                            name={field.name}
+                                            type={field.type}
+                                            value={form[field.name]}
+                                            onChange={handleChange}
+                                            placeholder={field.placeholder}
+                                            required={field.required}
+                                        />
+                                    </div>
+                                );
+                            })}
+
 
                             <button
                                 type="submit"
