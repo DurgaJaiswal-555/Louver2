@@ -1,6 +1,7 @@
 import type { JSX } from "react";
 
-import { SOCIAL_LINKS } from "@mocks/footer";
+import { FACILITIES, SOCIAL_LINKS } from "@mocks/footer";
+import { Link } from "react-router-dom";
 
 export default function Footer(): JSX.Element {
 
@@ -26,15 +27,16 @@ export default function Footer(): JSX.Element {
 
                                 <div>
                                     <h4 className="font-semibold mb-3">Facilities</h4>
+
                                     <ul className="text-xs md:text-sm space-y-2 text-gray-800">
-                                        <li>Tennis Courts</li>
-                                        <li>Basketball Courts</li>
-                                        <li>Football Field</li>
-                                        <li>Swimming Pool</li>
-                                        <li>Gym & Fitness Center</li>
-                                        <li>Multi-purpose Hall</li>
+                                        {FACILITIES.map((facility) => (
+                                            <li key={facility.id}>
+                                                {facility.label}
+                                            </li>
+                                        ))}
                                     </ul>
                                 </div>
+
 
                                 <div>
                                     <h4 className="font-semibold mb-3">About Us</h4>
@@ -49,15 +51,15 @@ export default function Footer(): JSX.Element {
                                         <h4 className="font-semibold mb-3">Social</h4>
                                         <div className="flex flex-col gap-3">
                                             {SOCIAL_LINKS.map(({ label, href, icon: Icon }) => (
-                                                <a
+                                                <Link
                                                     key={label}
-                                                    href={href}
+                                                    to={href}
                                                     aria-label={label}
                                                     className="inline-flex items-center gap-1 bg-white/50 px-2 py-1 rounded-full border w-max text-xs"
                                                 >
                                                     <Icon className="size-4 md:size-6" />
                                                     {label}
-                                                </a>
+                                                </Link>
                                             ))}
                                         </div>
                                     </div>
@@ -71,6 +73,6 @@ export default function Footer(): JSX.Element {
                     </div>
                 </div>
             </div>
-        </footer>
+        </footer >
     );
 }
