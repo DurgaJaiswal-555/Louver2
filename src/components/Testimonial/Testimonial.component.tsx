@@ -36,26 +36,26 @@ export default function Testimonials(): JSX.Element {
                         </button>
 
                         <div className="relative w-full md:w-2/3">
-                            {TESTIMONIALS?.length > 0 ? (TESTIMONIALS?.map((t, i) => (
+                            {TESTIMONIALS?.length > 0 ? (TESTIMONIALS?.map((testimonial, idx) => (
                                 <figure
-                                    key={t?.id}
-                                    className={`transition-all duration-500 ease-in-out ${i === index
+                                    key={crypto.randomUUID()}
+                                    className={`transition-all duration-500 ease-in-out ${idx === index
                                         ? "block opacity-100 translate-y-0"
                                         : "hidden opacity-0 -translate-y-4"
                                         }`}
                                 >
                                     <div className="bg-white rounded-2xl shadow-md p-6 flex flex-col md:flex-row items-center md:items-start gap-6">
                                         <img
-                                            src={t?.img}
-                                            alt={t?.name}
+                                            src={testimonial?.img}
+                                            alt={testimonial?.name}
                                             className="size-40 rounded-full object-cover flex-shrink-0"
                                         />
                                         <figcaption className="flex-1 text-center md:text-left">
-                                            <div className="font-semibold mb-2">{t?.name}</div>
+                                            <div className="font-semibold mb-2">{testimonial?.name}</div>
                                             <p className="text-gray-700 mb-2 mx-auto text-sm w-4/5 md:w-full">
-                                                {t?.text}
+                                                {testimonial?.text}
                                             </p>
-                                            <p className="text-xs text-gray-700">{t?.date}</p>
+                                            <p className="text-xs text-gray-700">{testimonial?.date}</p>
                                         </figcaption>
                                     </div>
                                 </figure>

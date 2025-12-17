@@ -14,9 +14,6 @@ function App() {
       <Facilities />
       <SportsCategory />
       <ContactForm />
-      <Hero />
-      <About />
-      <Facilities />
       <Testimonials />
     </>
   )
