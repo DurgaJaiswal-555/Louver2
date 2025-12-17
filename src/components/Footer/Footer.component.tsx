@@ -3,7 +3,6 @@ import type { JSX } from "react";
 import { SOCIAL_LINKS } from "@mocks/footer";
 
 export default function Footer(): JSX.Element {
-    const SOCIAL_LINK_CLASS = "inline-flex items-center gap-1 bg-white/50 px-2 py-1 rounded-full border w-max text-xs";
 
     return (
         <footer className="px-6 mb-12">
@@ -54,7 +53,7 @@ export default function Footer(): JSX.Element {
                                                     key={label}
                                                     href={href}
                                                     aria-label={label}
-                                                    className={SOCIAL_LINK_CLASS}
+                                                    className="inline-flex items-center gap-1 bg-white/50 px-2 py-1 rounded-full border w-max text-xs"
                                                 >
                                                     <Icon className="size-4 md:size-6" />
                                                     {label}
