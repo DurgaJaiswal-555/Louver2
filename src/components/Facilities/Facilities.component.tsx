@@ -38,7 +38,7 @@ export default function FacilitiesSlider(): JSX.Element {
                     </TagLabel>
                     <h2 className="text-3xl md:text-4xl font-bold my-2">
                         Explore Our Facilities
-                    </h2>
+                    </span>
                 </div>
                 <Button
                     rightIcon={<ChevronRight className="size-6" />}
