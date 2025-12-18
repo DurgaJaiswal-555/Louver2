@@ -3,6 +3,7 @@ import About from "@components/About";
 import Facilities from "@components/Facilities";
 import SportsCategory from "@components/SportsCategory";
 import ContactForm from "@components/ContactUs";
+import Testimonials from "@components/Testimonial";
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <Facilities />
       <SportsCategory />
       <ContactForm />
+      <Testimonials />
     </>
   )
 }
