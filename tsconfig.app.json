@@ -13,6 +13,8 @@
       "@types/*": ["src/types/*"],
       "@components/*": ["src/components/*"],
       "@mocks/*": ["src/mock-data/*"],
+      "@lib/*": ["src/lib/*"],
+      "@common-components/*": ["src/common-components/*"],
     },
 
     /* Bundler mode */

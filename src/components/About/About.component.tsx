@@ -2,6 +2,9 @@ import type { JSX } from 'react';
 import { ArrowLeft, ArrowRight, MoveUpRight } from 'lucide-react';
 
 import { cards } from '@mocks/about';
+import { Button } from '@common-components/ui/button';
+import { TagLabel } from '@common-components/ui/tag-label';
+import { OnlyIconButton } from '@common-components/ui/only-icon-btn/iconBtn';
 
 export default function Cards(): JSX.Element {
     return (
@@ -11,17 +14,19 @@ export default function Cards(): JSX.Element {
                 {/* Left: About */}
                 <div className="flex flex-col justify-between bg-white rounded-2xl h-full min-w-64 flex-1">
                     <div>
-                        <span className="inline-block bg-white border border-gray-200 text-sm px-3 py-1 rounded-full font-semibold mb-6">About Louvre</span>
-                        <h3 className="text-2xl font-thin md:text-3xl leading-10 mb-6 text-wrap">At Louvre sport center, we're passionate about providing a top-notch environment for athletes of all levels.</h3>
+                        <TagLabel variant="outline" className="bg-white border border-gray-200 text-black text-sm px-3 py-1 rounded-full font-semibold mb-8">
+                            About Louvre
+                        </TagLabel>
+                        <h3 className="text-2xl font-light md:text-3xl leading-10 mb-6">At Louvre sport center, we're passionate about providing a top-notch environment for athletes of all levels.</h3>
                     </div>
 
                     <div>
-                        <button className="inline-flex items-center gap-3 bg-gray-800 text-white px-6 py-3 rounded-full font-semibold cursor-pointer">
+                        <Button
+                            rightIcon={<MoveUpRight className="size-4" />}
+                            className="bg-gray-800 hover:bg-gray-900 text-white px-9 py-7 rounded-full font-semibold cursor-pointer gap-2"
+                        >
                             Get in Touch
-                            <span className="inline-flex items-center justify-center w-7 h-7 bg-transparent rounded-full">
-                                <MoveUpRight className="w-4 h-4" />
-                            </span>
-                        </button>
+                        </Button>
                     </div>
                 </div>
 
@@ -32,16 +37,20 @@ export default function Cards(): JSX.Element {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-2xl" />
 
                     <div className="absolute left-6 top-6">
-                        <span className="inline-block text-white text-sm px-3 py-1 rounded-full">Indoor Area</span>
+                        <TagLabel variant="outline" className="text-white backdrop-blur-xs text-sm p-4 font-normal rounded-full">
+                            Indoor Area
+                        </TagLabel>
                     </div>
 
                     <div className="absolute left-6 bottom-6 text-white max-w-2/3">
                         <div className="text-sm font-medium">Versatile space for a wide range of activities</div>
                     </div>
 
-                    <button className="absolute cursor-pointer right-6 bottom-6 w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-md">
-                        <MoveUpRight className="text-black" />
-                    </button>
+                    <OnlyIconButton
+                        variant="outline"
+                        icon={<MoveUpRight size={22} />}
+                        className="absolute cursor-pointer right-6 bottom-6 size-12 bg-white shadow-md border-none"
+                    />
                 </article>
 
                 {/* Right: Small card */}
@@ -55,18 +64,20 @@ export default function Cards(): JSX.Element {
                         />
 
                         <div className="absolute left-4 top-4">
-                            <span className="inline-block backdrop-blur-xs border-white text-white text-sm px-3 py-1 rounded-full">
+                            <TagLabel variant="outline" className="text-white backdrop-blur-xs text-sm px-4 py-4 font-normal rounded-full">
                                 Outdoor Area
-                            </span>
+                            </TagLabel>
                         </div>
 
                         <div className="absolute left-6 bottom-6 text-white max-w-2/3">
                             <div className="text-xl font-medium">Futsal Court</div>
                         </div>
 
-                        <button className="absolute cursor-pointer right-6 bottom-6 w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center shadow-md">
-                            <MoveUpRight className="text-white" />
-                        </button>
+                        <OnlyIconButton
+                            variant="outline"
+                            icon={<MoveUpRight size={22} />}
+                            className="absolute cursor-pointer right-6 bottom-6 size-12 bg-gray-800 text-white shadow-md border-none"
+                        />
                     </div>
 
                     <div className="flex items-center justify-between py-4">
@@ -75,8 +86,16 @@ export default function Cards(): JSX.Element {
                         </div>
 
                         <div className="flex gap-3">
-                            <button className="text-gray-500 w-10 h-10 rounded-full bg-white flex items-center justify-center border rounded-full cursor-pointer"><ArrowLeft /></button>
-                            <button className="text-gray-500 w-10 h-10 rounded-full bg-white flex items-center justify-center border rounded-full cursor-pointer"><ArrowRight /></button>
+                            <OnlyIconButton
+                                variant="outline"
+                                icon={<ArrowLeft size={22} />}
+                                className="text-gray-500 size-10 border-gray-500 bg-white cursor-pointer"
+                            />
+                            <OnlyIconButton
+                                variant="outline"
+                                icon={<ArrowRight size={22} />}
+                                className="text-gray-500 size-10 border-gray-500 bg-white cursor-pointer"
+                            />
                         </div>
                     </div>
 
