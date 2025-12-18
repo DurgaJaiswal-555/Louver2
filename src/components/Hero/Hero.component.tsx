@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 
 import { ArrowUpRight, Asterisk, Menu, Search } from 'lucide-react';
 
-import bg from '@assets/hero-bg.png';
-
 import HeroOverlayTestimonialImages from './HeroOverlayTestimonialImage';
 
 const Hero: React.FC = () => {
@@ -16,13 +14,12 @@ const Hero: React.FC = () => {
 
   return (
     <section
-      className="bg-position-[15%_center] md:bg-center relative bg-cover min-h-screen text-white flex flex-col justify-between px-6 py-8"
-      style={{ backgroundImage: `url(${bg})` }}
+      className="bg-[url('/hero-bg.png')] bg-center relative bg-cover min-h-screen text-white flex flex-col justify-between px-6 py-8"
       aria-label="Hero section"
     >
       <div className="absolute pointer-events-none" />
 
-      <div className="relative z-10 flex flex-wrap items-center justify-between w-full">
+      <div className="relative z-10 flex flex-wrap items-center justify-between">
         <div className="flex items-center gap-4">
           <span className="font-bold text-lg tracking-widest">
             <span className='font-extrabold'>LOUVER</span>
@@ -39,7 +36,7 @@ const Hero: React.FC = () => {
           <Menu size={24} className="text-white" />
         </button>
 
-        <div className="hidden md:block backdrop-blur-xs rounded-full md:px-6 md:py-3">
+        <div className="hidden md:block bg-black/20 rounded-full md:px-6 md:py-3">
           <nav className="flex items-center gap-8 md:gap-4 md:text-sm">
             <Link to="/about" className='hover:underline'>About Us</Link>
             <Link to="/facilities" className='hover:underline'>Facilities</Link>
@@ -48,7 +45,7 @@ const Hero: React.FC = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-3">
-          <form onSubmit={handleSearchSubmit} className="flex items-center backdrop-blur-[1px] rounded-full md:p-1  border border-white">
+          <form onSubmit={handleSearchSubmit} className="flex items-center bg-black/20 rounded-full md:p-1 border border-white">
             <label htmlFor="hero-search" className="sr-only">Search</label>
             <input
               id="hero-search"
@@ -61,7 +58,7 @@ const Hero: React.FC = () => {
             </button>
           </form>
           <div className="hidden md:flex">
-            <button className="flex items-center gap-2 bg-gray-800 text-xs hover:bg-gray-900 text-white md:px-6 md:py-5 md:px-4 md:py-3 md:gap-1 rounded-full font-semibold cursor-pointer">
+            <button className="flex items-center gap-2 bg-gray-800 text-xs hover:bg-gray-900 text-white md:px-6 md:py-5 md:gap-1 rounded-full font-semibold cursor-pointer">
               <span>Book Now</span>
               <ArrowUpRight size={16} aria-hidden />
             </button>
@@ -73,7 +70,7 @@ const Hero: React.FC = () => {
 
       {menuOpen && (
         <>
-          <div className="fixed inset-0 z-20 bg-black/40" onClick={() => setMenuOpen(false)} />
+          <div className="absolute inset-0 z-20 bg-black/40" onClick={() => setMenuOpen(false)} />
           <div
             role="menu"
             aria-label="Mobile navigation"
@@ -81,8 +78,8 @@ const Hero: React.FC = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <a href="#about-us" className="block px-4 py-3 my-1 text-gray-700 text-sm focus:bg-black focus:text-white rounded-lg hover:bg-gray-700">About Us</a>
-            <a href="#facilities" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg focus:bg-black focus:text-white my-1 ">Facilities</a>
-            <a href="#membership" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg focus:bg-black focus:text-white my-1 ">Membership</a>
+            <a href="#facilities" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg focus:bg-black focus:text-white my-1">Facilities</a>
+            <a href="#membership" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg focus:bg-black focus:text-white my-1">Membership</a>
           </div>
         </>
       )}
@@ -92,7 +89,7 @@ const Hero: React.FC = () => {
           Sport Center
         </button>
 
-        <h1 className="text-2xl font-light xl:text-4xl leading-[1.05] md:leading-widest tracking-wider md:tracking-wider text-left">
+        <h1 className="text-2xl font-light xl:text-4xl leading-[1.05] md:leading-tight tracking-wider text-left">
           Your Play, Your Way — Modern Sports Facilities for Every Passion
         </h1>
       </div>

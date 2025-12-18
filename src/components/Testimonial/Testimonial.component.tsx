@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 
 import { TESTIMONIALS } from "@mocks/testimonial";
 
-export default function Testimonials(): JSX.Element {
+export default function Testimonial(): JSX.Element {
     const navBtnClass = "size-14 rounded-full border border-gray-300 flex items-center justify-center bg-white shadow-sm hover:bg-gray-100";
     const [index, setIndex] = useState<number>(0);
 

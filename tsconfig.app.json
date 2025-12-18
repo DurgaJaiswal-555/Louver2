@@ -11,7 +11,7 @@
     "paths": {
       "@assets/*": ["src/assets/*"],
       "@types/*": ["src/types/*"],
-      "@components/*": ["src/components/*"],
+      "@components": ["src/components/index"],
       "@mocks/*": ["src/mock-data/*"],
     },
 

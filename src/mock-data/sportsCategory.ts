@@ -1,4 +1,4 @@
-import type { TabItem } from "@components/SportsCategory/SportsCategory.types";
+import type { TabItem } from '@components';
 import tabImage from '@assets/SportsCategoryTab.jpg';
 
 export const SPORTS_TAB_DATA: TabItem[] = [

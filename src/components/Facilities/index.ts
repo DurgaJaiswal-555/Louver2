@@ -1,2 +1,4 @@
-export { default } from "./Facilities.component";
-export * from "./Facilities.types";
+import Facilities from './Facilities.component';
+
+export { Facilities };
+export type * from './Facilities.types';

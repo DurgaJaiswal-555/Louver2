@@ -1,5 +1,7 @@
-export { default as About } from "./About";
-export * from "./About";
-
-export { default as Hero } from "./Hero/Hero";
-export * from './Hero/Hero';
+export * from './Hero';
+export * from './About';
+export * from './Facilities';
+export * from './SportsCategory';
+export * from './ContactUs';
+export * from './Testimonial';
+export * from './Subscribe';
