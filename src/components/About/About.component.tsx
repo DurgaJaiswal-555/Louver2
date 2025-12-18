@@ -8,11 +8,11 @@ import { OnlyIconButton } from '@common-components/ui/only-icon-btn/iconBtn';
 
 export default function Cards(): JSX.Element {
     return (
-        <section aria-label="Cards" className="px-4 py-4 md:px-1 md:py-12 max-w-7xl mx-auto">
+        <section aria-label="Cards" className="px-1 md:px-2 py-12 max-w-7xl mx-auto">
             <div className="flex flex-wrap gap-6 items-start">
 
                 {/* Left: About */}
-                <div className="flex flex-col justify-between bg-white rounded-2xl h-full min-w-72 flex-1">
+                <div className="flex flex-col justify-between bg-white rounded-2xl h-full min-w-64 flex-1">
                     <div>
                         <TagLabel variant="outline" className="bg-white border border-gray-200 text-black text-sm px-3 py-1 rounded-full font-semibold mb-8">
                             About Louvre
@@ -31,7 +31,7 @@ export default function Cards(): JSX.Element {
                 </div>
 
                 {/* Center: Large card */}
-                <article className="relative rounded-2xl h-80 md:h-96 overflow-hidden min-w-72 flex-1">
+                <article className="relative rounded-2xl h-72 md:h-80 overflow-hidden min-w-72 flex-1">
                     <img src={cards[1].img} alt={cards[1].title} className="w-full h-full object-cover rounded-2xl" />
 
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-2xl" />
