@@ -1,4 +1,4 @@
-import { About, ContactUs, Facilities, Hero, SportsCategory, Subscribe, Testimonial } from "./components"
+import { About, ContactUs, Facilities, Hero, SportsCategory, Subscribe, Testimonial } from "@components"
 
 function App() {
 
