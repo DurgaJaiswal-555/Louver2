@@ -21,9 +21,9 @@ export const OnlyIconButton = React.forwardRef<
     };
 
     const sizes = {
-      sm: "h-7 w-7 text-xs",
-      md: "h-8 w-8 text-sm",
-      lg: "h-10 w-10 text-base",
+      sm: "size-7 text-xs",
+      md: "size-8 text-sm",
+      lg: "size-10 text-base",
     };
 
     return (

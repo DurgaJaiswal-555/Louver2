@@ -57,9 +57,9 @@ export const InputFieldWithIconButton = React.forwardRef<
                         className={cn(
                             "absolute right-0 top-1/2 -translate-y-1/2 flex items-center justify-center rounded-full cursor-pointer",
                             {
-                                "h-6 w-6": inputSize === "sm",
-                                "h-7 w-7": inputSize === "md",
-                                "h-12 w-12": inputSize === "lg",
+                                "size-6": inputSize === "sm",
+                                "size-7": inputSize === "md",
+                                "size-12": inputSize === "lg",
                             }
                         )}
                     >
