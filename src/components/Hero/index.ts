@@ -1,1 +1,3 @@
-export { default } from './Hero.component';
+import Hero from './Hero.component';
+
+export { Hero };

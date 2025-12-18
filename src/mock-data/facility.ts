@@ -3,7 +3,7 @@ import facility2 from '@assets/F2.jpg';
 import facility3 from '@assets/F3.jpg';
 import facility4 from '@assets/F4.jpg';
 
-import type { FacilityItem } from '@components/Facilities/Facilities.types';
+import type { FacilityItem } from '@components';
 
 export const facilities: FacilityItem[] = [
   {

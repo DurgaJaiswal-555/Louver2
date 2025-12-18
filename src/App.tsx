@@ -1,10 +1,4 @@
-import Hero from "@components/Hero";
-import About from "@components/About";
-import Facilities from "@components/Facilities";
-import SportsCategory from "@components/SportsCategory";
-import ContactForm from "@components/ContactUs";
-import Testimonials from "@components/Testimonial";
-import Subscribe from "@components/Subscribe";
+import { About, ContactUs, Facilities, Hero, SportsCategory, Subscribe, Testimonial } from "./components"
 
 function App() {
 
@@ -14,8 +8,8 @@ function App() {
       <About />
       <Facilities />
       <SportsCategory />
-      <ContactForm />
-      <Testimonials />
+      <ContactUs />
+      <Testimonial />
       <Subscribe />
     </>
   )

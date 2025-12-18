@@ -1,10 +1,10 @@
-import type Testimonial from "@components/Testimonial/Testimonial.types";
+import type { TestimonialProps } from "@components";
 
 import user1 from "@assets/test1.avif";
 import user2 from "@assets/test2.avif";
 import user3 from "@assets/test3.avif";
 
-export const TESTIMONIALS: Testimonial[] = [
+export const TESTIMONIALS: TestimonialProps[] = [
     {
         id: 1,
         name: "Alex Morgan",

@@ -1,4 +1,4 @@
-import type { InputFieldConfig } from "@components/ContactUs/ContactUs.types";
+import type { InputFieldConfig } from "@components";
 
 export const INPUT_FIELDS: InputFieldConfig[] = [
   {

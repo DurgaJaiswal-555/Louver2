@@ -1,4 +1,4 @@
-import type { CardItem } from '@components/About/About.types';
+import type { CardItem } from '@components';
 
 import card1 from '@assets/Card1.png';
 import card2 from '@assets/Card2.png';

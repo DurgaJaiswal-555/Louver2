@@ -1,1 +1,3 @@
-export {default} from "./Subscribe.component";
+import Subscribe from './Subscribe.component';
+
+export { Subscribe };
