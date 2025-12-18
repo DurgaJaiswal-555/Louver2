@@ -38,7 +38,7 @@ export default function Subscribe(): JSX.Element {
                 Email
               </label>
 
-              <div className="flex items-center max-w-md bg-gray-800 rounded-full px-4 py-2">
+              <div className="flex items-center max-w-md bg-gray-800 rounded-full px-3 py-2">
                 <input
                   id="email"
                   type="email"
@@ -48,7 +48,7 @@ export default function Subscribe(): JSX.Element {
                 <button
                   type="button"
                   aria-label="Subscribe"
-                  className="ml-3 p-3 bg-blue-500 hover:bg-blue-600 text-white rounded-full shadow flex items-center justify-center"
+                  className="ml-3 p-3 bg-blue-500 hover:bg-blue-600 text-white rounded-full shadow flex items-center justify-center cursor-pointer"
                 >
                   <Send />
                 </button>
